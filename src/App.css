@@ -1,42 +1,63 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+body{
+  background-color: #f5ebd2;
 }
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.header{ 
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+  .navBar{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .title{
+    font-size: 2rem;
+    display: flex;
+    gap: 1rem;
   }
-}
 
-.card {
-  padding: 2em;
-}
+  .title{
+    color: #E7411C;
+    font-family: "Ultra", serif;
+    font-size: 4rem;
+    margin-left: 2rem;
+  }
+  .img-title{
+    width: 5rem;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .navBar-ul{
+    display: flex;
+    gap: 2rem;
 
-.read-the-docs {
-  color: #888;
-}
+  }
+  .navBar-li{
+    list-style: none;
+    transition: all linear .3s;
+  }
+  .navBar-li:hover{
+    transform: scale(1.1);
+  }
+  .navBar-a{
+    font-size: 2rem;
+    text-decoration: none;
+    color: #4e2313;
+    font-family: 'Ultra', serif;
+    
+  }
+  .icon-button{
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+  }
+  .subtitle{
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    font-family: "DM Serif Display", serif;
+    color: #4e2313;
+  }
+  
