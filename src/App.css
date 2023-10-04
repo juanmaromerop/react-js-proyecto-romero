@@ -60,6 +60,12 @@ body {
   background-color: transparent;
   border: none;
   font-size: 2rem;
+  text-decoration: none;
+
+}
+
+.icon-button2 {
+  color: #4e2313;
 }
 
 .subtitle {
@@ -69,11 +75,56 @@ body {
   font-family: "DM Serif Display", serif;
   color: #4e2313;
 }
-.container{
+
+.itemCount {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.itemCount-container {
+  display: flex;
+  gap: 4rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.itemCount-button {
+  background-color: transparent;
+  border: none;
+  font-size: 2.2rem;
+  cursor: pointer;
+}
+
+.itemCount-cotainer2 {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.itemCount-button2 {
+  border: none;
+  background-color: transparent;
+  font-size: 1.5rem;
+  color: #E7411C;
+  cursor: pointer;
+}
+
+.itemCount-cotainer2-p {
+  font-size: 1.4rem;
+  color: #4e2313;
+  font-family: "DM Serif Display", serif;
+}
+
+
+.container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin: 2rem;
 }
+
 .listContainer {
   display: flex;
   flex-direction: column;
@@ -81,20 +132,24 @@ body {
   text-align: center;
   margin-top: 2rem;
 }
+
 .listContainer img {
-width: 100%;
-transition: all linear .3s;
+  width: 100%;
+  transition: all linear .3s;
 }
-.listContainer img:hover{
+
+.listContainer img:hover {
   transform: scale(1.1);
 }
+
 .listContainer-item {
   text-decoration: none;
   color: #4e2313;
   font-family: 'Ultra', serif;
 }
-.listContainer-button{
-  font-size: 1rem,;
+
+.listContainer-button {
+  font-size: 1rem, ;
   padding: .2rem 1.5rem;
   border: none;
   border-radius: .2rem;
@@ -102,25 +157,160 @@ transition: all linear .3s;
   cursor: pointer;
   color: #fff;
 }
-.listContainer-button:hover{
-background-color: #E7411C;
+
+.listContainer-button:hover {
+  background-color: #E7411C;
 }
 
 .loading {
   font-size: 2rem;
 }
-.itemDetail{
+
+.itemDetail {
   display: flex;
   flex-direction: column;
   text-align: center;
   gap: .5rem;
 }
-.itemDetail-img{
+
+.itemDetail-img {
   width: 60%;
   align-self: center;
 }
-.itemDetail-item{
+
+.itemDetail-item {
   font-size: 2.5rem;
   color: #4e2313;
+}
 
+.itemDetail-compra {
+  font-size: 1.8rem;
+  text-decoration: none;
+  background-color: #4e2313;
+  width: 20%;
+  padding: .3rem 2rem ;
+  align-self: center;
+  color: #fff;
+  border-radius: .3rem;
+}
+.itemDetail-compra:hover{
+  background-color: #E7411C;
+}
+
+
+.itemContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: start;
+  background-color: #f5ebd2;
+  margin: 2rem;
+  width: 40%;
+  border-radius: 1rem;
+  box-shadow: 7px 5px 14px -6px #4e2313;
+  padding: 1rem;
+
+}
+
+.itemContainer-img {
+  width: 25%;
+}
+
+.itemContainer-msj {
+  font-size: 2rem;
+  color: #4e2313;
+}
+
+.itemContainer-button {
+  font-size: 1rem, ;
+  padding: .2rem 1.5rem;
+  border: none;
+  border-radius: .2rem;
+  background-color: #4e2313;
+  cursor: pointer;
+  color: #fff;
+  align-self: center;
+}
+
+.itemContainer-button:hover {
+  background-color: #E7411C;
+}
+
+.itemContainer-button2 {
+  margin-left: 2rem;
+  font-size: 1rem, ;
+  padding: .3rem 3rem;
+  border: none;
+  border-radius: .2rem;
+  background-color: #4e2313;
+  cursor: pointer;
+  color: #fff;
+  align-self: center;
+  margin-bottom: 2rem;
+}
+
+.itemContainer-button2:hover {
+  background-color: #e71c1c;
+}
+
+.itemContainer-button3 {
+  font-size: 2rem;
+  margin: 1rem;
+}
+
+.itemContainer-buttonCompra {
+  font-size: 1.5rem;
+  text-decoration: none;
+  display: block;
+  padding: .5rem 1rem;
+  margin: 1rem 2rem;
+  background-color: #4e2313;
+  color: #fff;
+  width: 12%;
+  text-align: center;
+  border-radius: .2rem;
+}
+
+.itemContainer-buttonCompra:hover {
+  background-color: #E7411C;
+}
+
+.totalPrice {
+  font-size: 2rem;
+  color: #4e2313;
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+}
+.formContainer{
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  text-align: center;
+  align-items: center;
+}
+.formContainer-label{
+font-size: 1.5rem;
+color: #4e2313;
+font-family: 'Ultra', serif;
+}
+.formContainer-input{
+  width: 30%;
+  padding: .2rem 1rem;
+  font-size: 2rem;
+  text-align: center;
+  border-radius: .8rem ;
+}
+.formContainer-button{
+  padding: .5rem 4rem;
+
+  border: none;
+  border-radius: .2rem;
+  background-color: #4e2313;
+  cursor: pointer;
+  color: #fff;
+  align-self: center;
+  margin-top: 1rem;
+}
+.formContainer-button:hover{
+  background-color: #E7411C;
 }

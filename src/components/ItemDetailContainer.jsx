@@ -1,27 +1,22 @@
 import { useEffect, useState } from "react"
-import hamburgerJson from "../hamburgers.json"
 import { useParams } from "react-router-dom"
 import ItemDetail from "./ItemDetail"
+import {doc, getDoc, getFirestore} from "firebase/firestore"
 
-const hamburgerId = () => {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve(hamburgerJson)
-        }, 500)
-    })
-}
+
 export default function ItemDetailContainer() {
     const [data, setData] = useState([])
     const { id } = useParams()
 
-
     useEffect(() => {
-        hamburgerId(id).then((product) => {
-            let resultado = product.find((hamburger) => hamburger.id == id);
-            setData(resultado)
+        const db = getFirestore()
+        const dataRef = doc(db, "hamburger", id)
+        getDoc(dataRef).then((snapshot) =>{
+            if (snapshot.exists()) {
+                setData({id: snapshot.id, ...snapshot.data()})
+            }
         })
     },[id])
-
     return (
         <>
         <ItemDetail 

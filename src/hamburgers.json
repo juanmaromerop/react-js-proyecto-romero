@@ -4,7 +4,7 @@
         "nombre": "Hamburguesa con queso",
         "categoria": "carne",
         "precio": 10,
-        "stock": 5,
+        "stock": 8,
         "img": "https://res.cloudinary.com/dogupspl8/image/upload/v1671141691/Paginas/BK_WEB_DOBLE-CUARTO-XL_1200X800_020822_hsuxfc.png"
     },
     {
@@ -12,15 +12,15 @@
         "nombre": "Hamburguesa doble con queso",
         "categoria": "carne",
         "precio": 15.00,
-        "stock": 5,
+        "stock": 4,
         "img": "https://res.cloudinary.com/dogupspl8/image/upload/v1671141748/Paginas/BK_WB_CHEESEONIONDOBLE_1200X800_140922_q0gjht.png"
     },
     {
         "id": 3,
-        "nombre": "Hamburguesa de pollo",
+        "nombre": "Hamburguesa doble con palta",
         "categoria": "carne",
         "precio": 5,
-        "stock": 5,
+        "stock": 3,
         "img": "https://res.cloudinary.com/dogupspl8/image/upload/v1671141768/Paginas/BK_WEB_Whopper-Guacamole_1200X900_210922_det9pz.png"
     },
     {
@@ -28,7 +28,7 @@
         "nombre": "Hamburgesa XXL",
         "categoria": "carne",
         "precio": 20,
-        "stock": 5,
+        "stock": 9,
         "img": "https://res.cloudinary.com/dogupspl8/image/upload/v1671141784/Paginas/Armado-whopper-doble-con-queso_fzgjno.png"
     },
     
@@ -37,7 +37,7 @@
         "nombre": "Hamburguesa Camello",
         "categoria": "carne",
         "precio": 25,
-        "stock": 5,
+        "stock": 7,
         "img": "https://res.cloudinary.com/dogupspl8/image/upload/v1671141819/Paginas/Provoking-carne_kidzy0.png"
     },
 
@@ -47,7 +47,7 @@
         "nombre": "Provo King Pollo Crispy",
         "categoria": "pollo",
         "precio": 10,
-        "stock": 5,
+        "stock": 6,
         "img": "https://res.cloudinary.com/dogupspl8/image/upload/v1694023880/Provoking-pollo_s6xfik.png"
     },
     {
@@ -55,7 +55,7 @@
         "nombre": "Melt de pollo con salsa Stacker",
         "categoria": "pollo",
         "precio": 15.00,
-        "stock": 5,
+        "stock": 12,
         "img": "https://res.cloudinary.com/dogupspl8/image/upload/v1694023811/Fotos-melty_1200x1200_MELT-POLLO-CRISPY-SALSA-STACKER_zuvjho.png"
     },
     {
@@ -63,7 +63,7 @@
         "nombre": "Melt de pollo con salsa Spicy",
         "categoria": "pollo",
         "precio": 5,
-        "stock": 5,
+        "stock": 8,
         "img": "https://res.cloudinary.com/dogupspl8/image/upload/v1694025087/Fotos-melty_1200x1200_MELT-POLLO-CRISPY-SALSA-SPICY_crmn8z.png"
     },
     {
@@ -71,7 +71,7 @@
         "nombre": "King de pollo Francés",
         "categoria": "pollo",
         "precio": 20,
-        "stock": 5,
+        "stock": 10,
         "img": "https://res.cloudinary.com/dogupspl8/image/upload/v1694025321/BK_WEB_KING-DE-POLLO-FRANCES_1200X800_020822_1_zbwf2g.png"
     },
     
@@ -80,7 +80,7 @@
         "nombre": "King de Pollo Guacamole",
         "categoria": "pollo",
         "precio": 25,
-        "stock": 5,
+        "stock": 6,
         "img": "https://res.cloudinary.com/dogupspl8/image/upload/v1694023916/BK_WEB_King-de-Pollo-Guacamole_1200X900_210922_1_zgks6f.png"
     },
     {
@@ -88,7 +88,7 @@
         "nombre": "Whopper vegetal",
         "categoria": "veggie",
         "precio": 10,
-        "stock": 5,
+        "stock": 2,
         "img": "https://res.cloudinary.com/dogupspl8/image/upload/v1694024048/WhopperVegetal_2604_zglyox.png"
     },
     {
@@ -96,7 +96,7 @@
         "nombre": "King vegetal",
         "categoria": "veggie",
         "precio": 15.00,
-        "stock": 5,
+        "stock": 15,
         "img": "https://res.cloudinary.com/dogupspl8/image/upload/v1694024035/King-de-Pollo_2604_ywsvuk.png"
     },
     {
@@ -104,7 +104,7 @@
         "nombre": "Nuggets Vegetales",
         "categoria": "veggie",
         "precio": 5,
-        "stock": 5,
+        "stock": 7,
         "img": "https://res.cloudinary.com/dogupspl8/image/upload/v1694024026/BK_WEB_SEPTIEMBRE_MENU_NUGGETS-PLANT-BASE_270922_1200x800__d80uqi.png"
     },
     {
@@ -112,7 +112,7 @@
         "nombre": "Ensalada Caesar con pollo",
         "categoria": "veggie",
         "precio": 20,
-        "stock": 5,
+        "stock": 9,
         "img": "https://res.cloudinary.com/dogupspl8/image/upload/v1694024023/ensaladacaesar_z75zue.png"
     },
     
@@ -121,7 +121,7 @@
         "nombre": "Ensalada de Atún",
         "categoria": "veggie",
         "precio": 25,
-        "stock": 5,
+        "stock": 10,
         "img": "https://res.cloudinary.com/dogupspl8/image/upload/v1694024009/BK1543_Final_yvmnav.png"
     }
     

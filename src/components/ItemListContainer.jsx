@@ -1,44 +1,53 @@
 import { useEffect, useState } from "react"
-import hamburgerJson from "../hamburgers.json"
 import { useParams } from "react-router-dom"
 import ItemList from "./ItemList"
-
- 
-function getProducto() {
-    return new Promise((resolve => {
-      setTimeout(() => {
-        resolve(hamburgerJson)
-      }, 1500);
-    }))
-}
-export default function ItemListContainer() {
-
-    const [data, setData] = useState([])
-    const [loading, setLoading] = useState(true)
-    const { category } = useParams()
+import {collection, getDocs, getFirestore, query, where} from "firebase/firestore"
 
 
+export default function ItemListContainer({ greetings }) {
 
-    useEffect(() => {
-        getProducto(category).then(products => {
-          let itemsFilter = hamburgerJson.filter(element => element.categoria == category);
-          if (category === undefined) {
-            setData(products)
-            setLoading(false)
-          }
-          else {
-            setData(itemsFilter)
-            setLoading(false)
-          }
-        })
-      }, [category])
+  const [data, setData] = useState([])
+  const [loading, setLoading] = useState(true)
+  const { category } = useParams()
 
-    if (loading) return <p className="loading">Cargando tus productos...</p>
-    return(
-        <div className="container">
-            <ItemList data={data} />
+useEffect(() =>{
+  setLoading(true)
+  setTimeout(() => {
+    if (category === undefined) {
+      const db = getFirestore()
+      const dataRef = collection(db, "hamburger")
+      getDocs(dataRef).then((snapshot) =>{
+        if (snapshot !== 0) {
+          setLoading(false)
+          setData(snapshot.docs.map((res) =>({id: res.id, ...res.data()})))
+        }
+      })
+    } else {
+      const db = getFirestore();
+      const dataRef = query(collection(db, "hamburger"), where("categoria", "==", category));
+      getDocs(dataRef).then((snapshot) =>{
+        setLoading(false)
+        setData(
+          snapshot.docs.map((res) =>(
+            {id: res.id, ...res.data()}
+          ))
+        )
+      })
+    }
+        }, 700);
+}, [category])
 
-        </div>
-            
-    )
+
+
+
+  if (loading) return <p className="loading">Cargando tus productos...</p>
+  return (
+    <>
+      <h2 className="subtitle">{greetings}</h2>
+      <div className="container">
+        <ItemList data={data} />
+      </div>
+    </>
+
+  )
 }

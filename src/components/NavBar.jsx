@@ -22,9 +22,6 @@ export default function NavBar() {
             <div>
                 <h1 className="title">BIG BURGER</h1>
             </div>
-            <div>
-            <h2 className="subtitle">Bienvenidos</h2>
-            </div>
         </div>
     )
 } 
