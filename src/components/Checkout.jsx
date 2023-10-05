@@ -44,9 +44,6 @@ export default function Checkout({precioFinal}) {
             setCart([])
         })
     } 
-
-    console.log(cart);
-
     if (orderId) {
         return <h1>Su compra se realizo con exito!!! Esta es su orden: {orderId}</h1>
     }
