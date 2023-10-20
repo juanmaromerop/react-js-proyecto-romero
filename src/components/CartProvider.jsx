@@ -3,6 +3,7 @@ export const ThemeCart = createContext()
 
 export function CartProvider({ children }) {
     const [cart, setCart] = useState([]);
+    const [total, setTotal] = useState(0)
 
     const addItem = (item, quantity, stock, img, precio) => {
         if (quantity > 0) {
@@ -12,7 +13,7 @@ export function CartProvider({ children }) {
                     if (index === cartIndex) {
                         const newQuantity = cartItem.quantity + quantity
                         const updatedQuantity = newQuantity <= stock ? newQuantity : stock
-                        return { ...cartItem, item, quantity: updatedQuantity, precio: precio * quantity, img: img }
+                        return { ...cartItem, item, quantity: updatedQuantity, precio: precio, img: img }
                     } else {
                         return cartItem
                     }
@@ -20,7 +21,7 @@ export function CartProvider({ children }) {
                 setCart(updatedCart)
             } else {
                 const updatedQuantity = quantity <= stock ? quantity : stock
-                const updatedCart = [...cart, { item, quantity: updatedQuantity, precio: precio * quantity, img: img }]
+                const updatedCart = [...cart, { item, quantity: updatedQuantity, precio: precio, img: img }]
                 setCart(updatedCart)
             }
         }
@@ -29,7 +30,6 @@ export function CartProvider({ children }) {
         if (cart.length !== 0) {
             const product = cart.filter((element) => element.item !== itemId);
             setCart(product)
-
         }
     }
 
@@ -38,9 +38,14 @@ export function CartProvider({ children }) {
             setCart([])
         }
     }
+    const totalAmount = () =>{
+        const precioTotal = cart.reduce((totalPrice, product) => totalPrice + (product.precio * product.quantity), 0)
+        return (precioTotal);
+    }
+
 
     return (
-        <ThemeCart.Provider value={{ cart, addItem, removeItem, clear, setCart}}>
+        <ThemeCart.Provider value={{ cart, addItem, removeItem, clear, setCart, totalAmount, total}}>
             {children}
         </ThemeCart.Provider>
     )

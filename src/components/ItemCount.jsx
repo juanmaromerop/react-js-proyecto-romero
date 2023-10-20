@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 export default function ItemCount({ precio, stock, onAdd }) {
 
   const [count, setCount] = useState(1)
-  const [total, setTotal] = useState(0)
+  const [total, setTotal] = useState(count * precio) 
   const subtract = () => {
     if (count <= 1) {
       return
@@ -16,9 +16,10 @@ export default function ItemCount({ precio, stock, onAdd }) {
     }
     setCount(count + 1)
   }
-  useEffect(() => {
-    setTotal(count * precio)
-  })
+  const calculateTotal = () => {
+    return count * precio;
+  };
+
   
   return (
     <div className="itemCount">
@@ -29,7 +30,7 @@ export default function ItemCount({ precio, stock, onAdd }) {
       </div>
       <div className="itemCount-cotainer2">
         <button onClick={() =>{onAdd(count)}} className="itemCount-button2">Añadir al Carrito</button>
-        {total > 0 ? <p className="itemCount-cotainer2-p">Su total es de ${total}</p> : null}
+        {total > 0 ? <p className="itemCount-cotainer2-p">Su total es de ${calculateTotal()}</p> : null}
       </div>
 
     </div>

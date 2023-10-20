@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import ItemList from "./ItemList"
-import {collection, getDocs, getFirestore, query, where} from "firebase/firestore"
+import { collection, getDocs, getFirestore, query, where } from "firebase/firestore"
 
 
 export default function ItemListContainer({ greetings }) {
@@ -10,32 +10,30 @@ export default function ItemListContainer({ greetings }) {
   const [loading, setLoading] = useState(true)
   const { category } = useParams()
 
-useEffect(() =>{
-  setLoading(true)
-  setTimeout(() => {
+  useEffect(() => {
+    setLoading(true)
     if (category === undefined) {
       const db = getFirestore()
       const dataRef = collection(db, "hamburger")
-      getDocs(dataRef).then((snapshot) =>{
+      getDocs(dataRef).then((snapshot) => {
         if (snapshot !== 0) {
           setLoading(false)
-          setData(snapshot.docs.map((res) =>({id: res.id, ...res.data()})))
+          setData(snapshot.docs.map((res) => ({ id: res.id, ...res.data() })))
         }
       })
     } else {
       const db = getFirestore();
       const dataRef = query(collection(db, "hamburger"), where("categoria", "==", category));
-      getDocs(dataRef).then((snapshot) =>{
+      getDocs(dataRef).then((snapshot) => {
         setLoading(false)
         setData(
-          snapshot.docs.map((res) =>(
-            {id: res.id, ...res.data()}
+          snapshot.docs.map((res) => (
+            { id: res.id, ...res.data() }
           ))
         )
       })
     }
-        }, 700);
-}, [category])
+  }, [category])
 
 
 

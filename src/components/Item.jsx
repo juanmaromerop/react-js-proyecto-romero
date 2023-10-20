@@ -6,7 +6,7 @@ export default function Item({nombre, precio, id, img }) {
                 <img src={img} alt="" />
                 <h4 className="listContainer-item">{nombre}</h4>
                 <p className="listContainer-item">Precio: ${precio}</p>
-                <Link to={`/hamburger/${id}`} className="listContainer-item"><button className="listContainer-button">Ver Mas</button></Link >
+                <Link to={`/hamburger/${id}`} className="listContainer-button">Ver Mas</Link >
             </div>
     )
 }
